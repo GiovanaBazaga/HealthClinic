@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
     <title>Health Clinic</title>
 </head>
+
 <body>
     <h1>Bem-vindo à Clínica</h1>
 
@@ -18,4 +23,5 @@
         <button>Procurar consultas por médico</button>
     </a>
 </body>
+
 </html>

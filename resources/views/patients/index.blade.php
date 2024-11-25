@@ -11,32 +11,39 @@
 </head>
 
 <body>
-    <h1>Patients</h1>
+    <h1>Pacientes</h1>
     <div class="container">
-        <table>
+        <table class="table">
             <thead>
                 <tr>
-                    <th>CPF</th>
-                    <th>Name</th>
-                    <th>Phone Number</th>
+                    <th>Nome</th>
+                    <th>Número</th>
                     <th>Email</th>
-                    <th>Address</th>
+                    <th>Endereço</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($patients as $patient)
+                @foreach ($patients as $patient)
                 <tr>
-                    <td>{{ $patient->cpf }}</td>
                     <td>{{ $patient->name }}</td>
                     <td>{{ $patient->number }}</td>
                     <td>{{ $patient->email }}</td>
                     <td>{{ $patient->address }}</td>
+                    <td>
+                        <button><a href="{{ route('patients.edit', $patient->id) }}">Editar</a></button>
+                        <form action="{{ route('patients.destroy', $patient->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir esse paciente?')">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
-
+    <a href="{{ url('/') }}" class="btn btn-secondary">Voltar ao Menu Inicial</a>
 </body>
 
 </html>

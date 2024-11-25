@@ -31,9 +31,7 @@
                     <td>{{ $appointment->date }}</td>
                     <td>{{ $appointment->time }}</td>
                     <td>
-                        <!-- Edit -->
                         <button><a href="{{ route('appointments.edit', $appointment->id) }}">Editar</a></button>
-                        <!-- Delete -->
                         <form action="{{ route('appointments.destroy', $appointment->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
@@ -45,7 +43,7 @@
             </tbody>
         </table>
     </div>
-
+    <a href="{{ url('/') }}" class="btn btn-secondary">Voltar ao Menu Inicial</a>
 </body>
 
 </html>

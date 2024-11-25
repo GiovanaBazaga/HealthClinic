@@ -8,7 +8,6 @@ use App\Models\Patient;
 
 use Illuminate\Http\Request;
 
-
 class AppointmentController extends Controller
 {
     public function create()
@@ -137,5 +136,4 @@ class AppointmentController extends Controller
 
         return redirect()->route('appointments.index')->with('success', 'Consulta excluída com sucesso.');
     }
-
 }

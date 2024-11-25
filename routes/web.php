@@ -19,6 +19,10 @@ Route::get('doctors', [DoctorController::class, 'index'])->name('doctors.index')
 Route::get('patients/create', [PatientController::class, 'create'])->name('patients.create');
 Route::post('patients', [PatientController::class, 'store'])->name('patients.store');
 Route::get('patients', [PatientController::class, 'index'])->name('patients.index');
+Route::get('patients/{id}/edit', [PatientController::class, 'edit'])->name('patients.edit');
+Route::put('patients/{id}', [PatientController::class, 'update'])->name('patients.update');
+Route::delete('patients/{id}', [PatientController::class, 'destroy'])->name('patients.destroy');
+
 
 // Appointments
 Route::get('appointments/create', [AppointmentController::class, 'create'])->name('appointments.create');

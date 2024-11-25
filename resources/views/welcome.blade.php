@@ -22,6 +22,18 @@
     <a href="{{ route('appointments.search.doctor.form') }}">
         <button>Procurar consultas por médico</button>
     </a>
+
+    <a href="{{ route('patients.index') }}">
+        <button>Visualizar Pacientes</button>
+    </a>
+
+    <a href="{{ route('appointments.index') }}">
+        <button>Visualizar Consultas</button>
+    </a>
+
+    <a href="{{ route('doctors.index') }}">
+        <button>Visualizar Médicos</button>
+    </a>
 </body>
 
 </html>

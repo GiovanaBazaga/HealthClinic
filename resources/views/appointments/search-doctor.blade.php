@@ -40,7 +40,7 @@
         @endif
         @endif
     </div>
-
+    <a href="{{ url('/') }}" class="btn btn-secondary">Voltar ao Menu Inicial</a>
 </body>
 
 </html>

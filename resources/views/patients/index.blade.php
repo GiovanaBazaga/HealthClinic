@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 
     <title>Health Clinic</title>
 </head>
@@ -43,6 +43,7 @@
             </tbody>
         </table>
     </div>
+    <a href="{{ route('patients.create') }}" class="btn btn-secondary">Adicionar Paciente</a>
     <a href="{{ url('/') }}" class="btn btn-secondary">Voltar ao Menu Inicial</a>
 </body>
 

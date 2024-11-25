@@ -3,37 +3,35 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
 
     <title>Health Clinic</title>
 </head>
 
 <body>
-    <h1>Bem-vindo à Clínica</h1>
 
-    <a href="{{ route('appointments.search.form') }}">
-        <button>Procurar consultas por data</button>
-    </a>
+    <header>
+        <h1>Bem-vindo à Clínica</h1>
+        <p>Onde fazemos o nosso melhor para facilitar o seu negócio</p>
+    </header>
 
-    <a href="{{ route('appointments.search.specialty.form') }}">
-        <button>Procurar consultas por especialidade</button>
-    </a>
+    <h2>Selecione o que deseja</h2>
 
-    <a href="{{ route('appointments.search.doctor.form') }}">
-        <button>Procurar consultas por médico</button>
-    </a>
-
-    <a href="{{ route('patients.index') }}">
-        <button>Visualizar Pacientes</button>
-    </a>
-
-    <a href="{{ route('appointments.index') }}">
-        <button>Visualizar Consultas</button>
-    </a>
-
-    <a href="{{ route('doctors.index') }}">
-        <button>Visualizar Médicos</button>
-    </a>
+    <div class="container">
+        <a href="{{ route('appointments.search.form') }}">Procurar consultas por data</a>
+        <a href="{{ route('appointments.search.specialty.form') }}">Procurar consultas por especialidade</a>
+        <a href="{{ route('appointments.search.doctor.form') }}">Procurar consultas por médico</a>
+    </div>
+    <div class="container">
+        <a href="{{ route('patients.index') }}">Visualizar Pacientes</a>
+        <a href="{{ route('appointments.index') }}">Visualizar Consultas</a>
+        <a href="{{ route('doctors.index') }}">Visualizar Médicos</a>
+    </div>
+    <div class="container">
+        <a href="{{ route('patients.create') }}">Adicionar Paciente</a>
+        <a href="{{ route('appointments.create') }}">Adicionar Consulta</a>
+        <a href="{{ route('doctors.create') }}">Adicionar Médico</a>
+    </div>
 </body>
 
 </html>

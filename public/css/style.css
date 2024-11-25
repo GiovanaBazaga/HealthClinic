@@ -1,105 +1,129 @@
-/* Aplicando a fonte Poppins em toda a página */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
     text-align: center;
 }
 
-/* Estilizando o título h1 para ficar centralizado no topo da página */
 h1 {
-    text-align: center;
-    color: #333;
-    margin-top: 40px;
-    margin-bottom: 60px;
+    font-size: 2rem;
+    color: #6a1b9a;
+    margin: 20px 0;
 }
 
-/* Estilizando o conteúdo da página para ficar centralizado, separado do h1 */
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilizando as tabelas */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 18px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #6a1b9a;
+    color: white;
 }
 
 thead th {
-    background-color: #6a1b9a;
-    color: white;
-    padding: 10px;
-    border-radius: 10px 10px 0 0;
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
 }
 
 tbody tr {
-    background-color: white;
-    border-bottom: 1px solid #dddddd;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
 }
 
-tbody tr:last-child {
-    border-bottom: none;
+tbody tr:hover {
+    background-color: #f9f9f9;
 }
 
-td {
+tbody td {
     padding: 15px;
-    text-align: center;
+    text-align: left;
+    color: #333;
 }
 
-/* Botões edit e delete */
-button {
+tbody td button {
+    margin: 0 5px;
+    padding: 5px 10px;
     background-color: #7e57c2;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-button:hover {
+tbody td button:hover {
     background-color: #5e35b1;
 }
 
-/* Links dentro dos botões */
-a {
-    color: rgb(167, 167, 167);
+tbody td button a {
     text-decoration: none;
+    color: white;
+    font-weight: 500;
 }
 
-/* Formulário de busca */
-label{
-    margin: 7px;
+tbody td button:active {
+    transform: scale(0.98);
+}
+
+a.btn {
+    display: inline-block;
+    margin: 20px auto;
+    text-decoration: none;
+    color: white;
+    background-color: #7e57c2;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+a.btn:hover {
+    background-color: #5e35b1;
 }
 
 form {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    display: inline;
 }
 
-select, input[type="date"], input[type="time"] {
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
+.btn-danger {
+    background-color: #e57373;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #d32f2f;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     table {
-        font-size: 14px;
+        font-size: 0.9rem;
     }
-    button {
-        padding: 5px 10px;
+
+    tbody td button {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    a.btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
     }
 }

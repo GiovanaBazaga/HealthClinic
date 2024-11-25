@@ -35,7 +35,7 @@
                         <form action="{{ route('patients.destroy', $patient->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir esse paciente?')">Delete</button>
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir esse paciente?')">Excluir</button>
                         </form>
                     </td>
                 </tr>

@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/forms.css') }}">
 
-    <title>Editar Paciente</title>
+    <title>Health Clinic</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Edit Patient</h1>
+        <h1>Editar Paciente</h1>
         <form action="{{ route('patients.update', $patient->id) }}" method="POST">
             @csrf
             @method('PUT')
@@ -33,7 +33,7 @@
                 <label for="address" class="form-label">Endereço</label>
                 <input type="text" name="address" class="form-control" value="{{ $patient->address }}" required>
             </div>
-            <button type="submit" class="btn btn-primary">Atualizar</button>
+            <button type="submit">Atualizar</button>
             <button><a href="{{ route('patients.index') }}">Cancelar</a></button>
         </form>
     </div>

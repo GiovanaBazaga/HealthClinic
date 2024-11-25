@@ -36,35 +36,31 @@ class DoctorController extends Controller
         return view('doctors.index', compact('doctors'));
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function edit($id)
     {
-        //
+        $doctor = Doctor::findOrFail($id);
+        return view('doctors.edit', compact('doctor'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255',
+        ]);
+
+        $doctor = Doctor::findOrFail($id);
+        $doctor->update([
+            'name' => $request->name,
+        ]);
+
+        return redirect()->route('doctors.index')->with('success', 'Médico atualizado com sucesso.');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy($id)
     {
-        //
-    }
+        $doctor = Doctor::findOrFail($id);
+        $doctor->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return redirect()->route('doctors.index')->with('success', 'Médico excluído com sucesso.');
     }
 }

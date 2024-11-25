@@ -17,15 +17,15 @@
             @csrf
             <label for="cpf">CPF:</label>
             <input type="text" name="cpf" required>
-            <label for="name">Name:</label>
+            <label for="name">Nome:</label>
             <input type="text" name="name" required>
-            <label for="number">Phone Number:</label>
+            <label for="number">Número de Celular:</label>
             <input type="text" name="number" required>
             <label for="email">Email:</label>
             <input type="email" name="email" required>
-            <label for="address">Address:</label>
+            <label for="address">Endereço:</label>
             <input type="text" name="address" required>
-            <button type="submit">Add Patient</button>
+            <button type="submit">Salvar</button>
         </form>
     </div>
 </body>

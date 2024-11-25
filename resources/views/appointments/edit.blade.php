@@ -37,6 +37,7 @@
             <label for="time">Hora:</label>
             <input type="time" name="time" value="{{ $appointment->time }}" required>
             <button type="submit">Atualizar Consulta</button>
+            <button><a href="{{ route('appointments.index') }}">Cancelar</a></button>
         </form>
     </div>
 </body>

@@ -33,7 +33,8 @@
                 <label for="address" class="form-label">Endereço</label>
                 <input type="text" name="address" class="form-control" value="{{ $patient->address }}" required>
             </div>
-            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+            <button><a href="{{ route('patients.index') }}">Cancelar</a></button>
         </form>
     </div>
 </body>
